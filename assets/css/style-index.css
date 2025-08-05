@@ -1,0 +1,18 @@
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.image-set {
+  display: none;
+}
+.image-set.active {
+  display: block;
+}
+.img-fluid {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
