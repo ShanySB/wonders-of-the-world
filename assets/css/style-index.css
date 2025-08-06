@@ -4,15 +4,27 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.image-set {
-  display: none;
-}
-.image-set.active {
-  display: block;
-}
-.img-fluid {
+
+.square-card {
+  position: relative;
   width: 100%;
-  height: auto;
+  padding-top: 100%;
+  border-radius: 15px;
+  overflow: hidden;
   cursor: pointer;
-  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.square-card:hover {
+  transform: scale(1.03);
+}
+
+.square-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
