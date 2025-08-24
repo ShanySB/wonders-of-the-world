@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.image-set {
+  display: none;
+}
+
+.image-set.active {
+  display: flex;
+}
+
+/* Background image styling */
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* NavBar styling */
+.my-navbar {
+  background-color: #49492B !important;
+}
+
+.my-navbar .nav-link,
+.my-navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.my-navbar .nav-link:hover {
+  color: darkgreen !important;
+}
+
+/* Styling heading */
+h1 {
+  font-family: "Pacifico", cursive;
+}
+
+/* Footer Styling */
+.my-footer {
+  background-color: #49492B;
+  color: #fff;
+  padding: 20px;
+}
