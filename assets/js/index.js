@@ -1,13 +1,17 @@
 $(document).ready(function () {
     let choices = [];
 
-    $('.clickable-card').click(function () {
+    /**
+     * Action method to enable cards to cycle through choices
+     */
+    function action() {
         let currentSet = $(this).closest('.image-set');
         let nextSet = currentSet.next('.image-set');
         let chosenImg = $(this).find('img').attr('src');
+        let chosenText = $(this).find('.card-text').text(); // grab description text from card
 
-        // Save the chosen card
-        choices.push(chosenImg);
+        // Save the chosen card (image & text)
+        choices.push({ img: chosenImg, text: chosenText });
 
         if (nextSet.length) {
             // Go to the Next set of imgs
@@ -19,10 +23,15 @@ $(document).ready(function () {
             // No more sets = show results
             currentSet.fadeOut(500, function () {
                 // Show chosen cards
-                choices.forEach(src => {
+                choices.forEach(choice => {
                     $('#chosen-cards').append(`
                         <div class="col-md-3 mb-3">
-                            <img src="${src}" class="img-fluid rounded border">
+                            <div class="card chosen-card">
+                                <img src="${choice.img}" class="card-img">
+                                <div class="overlay">
+                                   <p>${choice.text}</p>
+                                </div>
+                            </div>
                         </div>
                     `);
                 });
@@ -30,17 +39,24 @@ $(document).ready(function () {
 
             $('#results').fadeIn(500);
         }
-    });
+    }
 
-    // Reset button functionality
-    $('#reset-btn').click(function () {
+    /**
+     * Reset method to call once user completes selection
+     */
+    function reset() {
         choices = [];
         $('#chosen-cards').empty();
         $('#results').fadeOut(500, function () {
             $('.image-set').hide().removeClass('active');
             $('.image-set').first().fadeIn(500).addClass('active');
         });
-    });
-});
+    }
 
-    
+    // Attach events
+    $('.clickable-card').click(action);
+    $('#reset-btn').click(reset);
+
+    // Run reset at start
+    reset();
+});
