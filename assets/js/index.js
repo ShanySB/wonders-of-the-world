@@ -23,20 +23,20 @@ $(document).ready(function () {
             // No more sets = show results
             currentSet.fadeOut(500, function () {
                 // Show chosen cards
-                choices.forEach(src => {
+                choices.forEach(choice => {
                     $('#chosen-cards').append(`
                         <div class="col-md-3 mb-3">
                             <div class="card chosen-card">
-                                <img src="${src}" class="img-fluid rounded border">
+                                <img src="${choice.img}" class="img-fluid rounded border">
                                 <div class="overlay">
-                                   <p>${src.split('/').pop().split('.')[0]}</p>
+                                   <p>${choice.text}</p>
                                 </div>
                             </div>
                         </div>
                     `);
 
                     // Add to the breakdown list
-                    $('#breakdown-list').append(`<li>${src.split('/').pop().split('.')[0]}</li>`);
+                    $('#breakdown-list').append(`<li>${choice.text}</li>`);
                 });
             });
 
