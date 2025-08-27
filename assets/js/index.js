@@ -23,23 +23,33 @@ $(document).ready(function () {
             // No more sets = show results
             currentSet.fadeOut(500, function () {
                 // Show chosen cards
-                choices.forEach(choice => {
+                choices.forEach(src => {
                     $('#chosen-cards').append(`
                         <div class="col-md-3 mb-3">
                             <div class="card chosen-card">
-                                <img src="${choice.img}" class="card-img">
+                                <img src="${src}" class="img-fluid rounded border">
                                 <div class="overlay">
-                                   <p>${choice.text}</p>
+                                   <p>${src.split('/').pop().split('.')[0]}</p>
                                 </div>
                             </div>
                         </div>
                     `);
+
+                    // Add to the breakdown list
+                    $('#breakdown-list').append(`<li>${src.split('/').pop().split('.')[0]}</li>`);
                 });
             });
 
             $('#results').fadeIn(500);
         }
     }
+
+    // Confirm button click
+$('#confirm-btn').click(function () {
+    localStorage.setItem("userChoices", JSON.stringify(choices));
+    // Redirect to form page
+    window.location.href = "form.html";
+});
 
     /**
      * Reset method to call once user completes selection
