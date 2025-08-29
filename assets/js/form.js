@@ -1,6 +1,6 @@
 $(document).ready(function () {
     /**
-     * Action method to enable show choices in a breakdown list
+     * Action method to enable shown choices in a breakdown list
      */
     // Get saved choices from localStorage
     let savedChoices = JSON.parse(localStorage.getItem("userChoices") || "[]");
