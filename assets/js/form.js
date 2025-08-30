@@ -5,6 +5,8 @@ $(document).ready(function () {
     // Get saved choices from localStorage
     let savedChoices = JSON.parse(localStorage.getItem("userChoices") || "[]");
 
+    console.log("Saved choices:", savedChoices);
+
     if (savedChoices.length > 0) {
         savedChoices.forEach(choice => {
             // Show each chosen card
