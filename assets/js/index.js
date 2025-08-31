@@ -1,9 +1,26 @@
 $(document).ready(function () {
-    let choices = [];
+    /**
+     * Introduction screen functionality
+     */
+    function showFirstSet() {
+       $('#intro-screen').fadeOut(500, function() {
+           $('#image-sets').fadeIn(500);
+        });
+    }
+
+    let introTimeout = setTimeout(showFirstSet, 3000);
+
+    // Skip intro button
+    $('#skip-btn').click(function() {
+    clearTimeout(introTimeout); // stop auto-fade
+    showFirstSet(); // immediately show first set
+    });
 
     /**
-     * Action method to enable cards to cycle through choices
+     * Card selection functionality
      */
+    let choices = [];
+
     function action() {
         let currentSet = $(this).closest('.image-set');
         let nextSet = currentSet.next('.image-set');
@@ -44,12 +61,12 @@ $(document).ready(function () {
         }
     }
 
-    // Confirm button click
-$('#confirm-btn').click(function () {
-    localStorage.setItem("userChoices", JSON.stringify(choices));
-    // Redirect to form page
-    window.location.href = "form.html";
-});
+    // Confirm button click, saves choices & go to form page
+    $('#confirm-btn').click(function () {
+        localStorage.setItem("userChoices", JSON.stringify(choices));
+        // Redirect to form page
+        window.location.href = "form.html";
+    });
 
     /**
      * Reset method to call once user completes selection

@@ -47,10 +47,14 @@
            </div>
       </div>
      </nav>
-    <div class="container text-center">
+    <div class="container my-5 text-center" id="intro-screen">
       <!-- Business Name -->
       <h1 class="my-4">Wonders Of the World</h1>
+      <p class="lead">Discover the most amazing places in the world and create your perfect trip!</p>
+      <button id="skip-btn" class="btn btn-secondary mt-3">Skip Intro</button>
+    </div>
 
+    <div class="container my-4" id="image-sets" style="display: none;">
       <!-- Image Set 1 -->
       <div class="image-set active">
         <div class="row">
@@ -266,14 +270,14 @@
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Final results (Hidden Initially) -->
        <div id="results" style="display: none;">
         <h2>Your Trip</h2>
         <div id="chosen-cards" class="row no-gutters justify-content-center">
         </div>
-       
-
+      
        <!-- Breakdown list of chosen cards -->
        <ul id="breakdown-list" class="mt3"></ul>
 
@@ -286,22 +290,23 @@
 
       <!-- Footer & Social Media Links -->
       <footer class="my-footer text-center py-4 mt-5">
-  <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center">
-    <p class="mb-2">&copy; 2025 Wonders Of The World. All rights reserved.</p>
+        <div class="container-fluid d-flex flex-wrap justify-content-center align-items-center">
+         <p class="mb-2">&copy; 2025 Wonders Of The World. All rights reserved.</p>
     
-    <div class="d-flex justify-content-center flex-wrap w-100 mb-2">
-      <a href="https://facebook.com" target="_blank" class="text-white mx-2">
-        <i class="fab fa-facebook fa-lg"></i>
-      </a>
-      <a href="https://twitter.com" target="_blank" class="text-white mx-2">
-        <i class="fab fa-twitter fa-lg"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" class="text-white mx-2">
-        <i class="fab fa-instagram fa-lg"></i>
-      </a>
-      <a href="https://snapchat.com" target="_blank" class="text-white mx-2">
-        <i class="fab fa-snapchat fa-lg"></i>
-      </a>
+         <div class="d-flex justify-content-center flex-wrap w-100 mb-2">
+          <a href="https://facebook.com" target="_blank" class="text-white mx-2">
+           <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+           <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="text-white mx-2">
+           <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://snapchat.com" target="_blank" class="text-white mx-2">
+           <i class="fab fa-snapchat fa-lg"></i>
+          </a>
+         </div>
     </div>
        </footer>
 
