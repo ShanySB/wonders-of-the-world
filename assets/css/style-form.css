@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 .image-set {
   display: none;
@@ -23,22 +24,40 @@ body {
 
 .my-navbar .nav-link,
 .my-navbar .navbar-brand {
-  color: #fff !important;
+  color: #FF6347 !important;
 }
 
 .my-navbar .nav-link:hover {
-  color: darkgreen !important;
+  color: white !important;
 }
 
 /* Styling heading */
 h1 {
-  font-family: "Pacifico", cursive;
+   font-family: "Pacifico", cursive;
+  text-align: center;
+  color: #FF6347;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
 /* Footer Styling */
 .my-footer {
+  font-family: "Pacifico", cursive;
   background-color: #49492B;
-  color: #fff;
+  color: #FF6347;
   padding: 20px;
   width: 100%;
+}
+
+/*Social media links styling */
+.social-links a {
+  color: #FF6347;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.social-links a:hover {
+  color: white;
 }
