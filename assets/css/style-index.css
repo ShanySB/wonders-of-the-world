@@ -33,6 +33,7 @@ body {
 /* Styling heading */
 h1 {
   font-family: "Pacifico", cursive;
+  text-align: center;
 }
 
 /* Landing page card styling */
