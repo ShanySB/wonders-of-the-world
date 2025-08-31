@@ -8,7 +8,7 @@ $(document).ready(function () {
         });
     }
 
-    let introTimeout = setTimeout(showFirstSet, 3000);
+    let introTimeout = setTimeout(showFirstSet, 5000);
 
     // Skip intro button
     $('#skip-btn').click(function() {
