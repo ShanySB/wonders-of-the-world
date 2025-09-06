@@ -198,7 +198,7 @@ h1, h2 {
   transition: background-color 0.3s;
 }
 
-#reset-btn {
+#reset-btn:hover {
   background-color: aqua;
 }
 
