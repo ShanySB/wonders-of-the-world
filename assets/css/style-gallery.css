@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 .image-set {
   display: none;
@@ -19,13 +19,13 @@ body {
 
 /* NavBar styling */
 .my-navbar {
-  background-color: #49492B !important;
+  background-color: #49492b !important;
 }
 
 .my-navbar .nav-link,
 .my-navbar .navbar-brand {
   font-family: "Lobster", cursive;
-  color: #FF6347 !important;
+  color: #ff6347 !important;
 }
 
 .my-navbar .nav-link:hover {
@@ -34,10 +34,10 @@ body {
 
 /* Styling heading */
 h1 {
-   font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursive;
   text-align: center;
-  color: #FF6347;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  color: #ff6347;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Gallery card styling */
@@ -72,8 +72,8 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,0.6);
-  color: #FF6347;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ff6347;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
@@ -83,14 +83,14 @@ h1 {
 /* Footer Styling */
 .my-footer {
   font-family: "Pacifico", cursive;
-  background-color: #49492B;
-  color: #FF6347;
+  background-color: #49492b;
+  color: #ff6347;
   padding: 20px;
   width: 100%;
 }
 /*Social media links styling */
 .social-links a {
-  color: #FF6347;
+  color: #ff6347;
   font-size: 1.2rem;
   margin: 0 10px;
   text-decoration: none;

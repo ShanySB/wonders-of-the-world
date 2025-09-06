@@ -3,17 +3,17 @@ $(document).ready(function () {
      * Introduction screen functionality
      */
     function showFirstSet() {
-       $('#intro-screen').fadeOut(500, function() {
-           $('#image-sets').fadeIn(500);
+        $('#intro-screen').fadeOut(500, function () {
+            $('#image-sets').fadeIn(500);
         });
     }
 
     let introTimeout = setTimeout(showFirstSet, 5000);
 
     // Skip intro button
-    $('#skip-btn').click(function() {
-    clearTimeout(introTimeout); // stop auto-fade
-    showFirstSet(); // immediately show first set
+    $('#skip-btn').click(function () {
+        clearTimeout(introTimeout); // stop auto-fade
+        showFirstSet(); // immediately show first set
     });
 
     /**
