@@ -24,6 +24,7 @@ body {
 
 .my-navbar .nav-link,
 .my-navbar .navbar-brand {
+  font-family: "Lobster", cursive;
   color: #FF6347 !important;
 }
 
