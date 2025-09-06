@@ -80,6 +80,37 @@ h1 {
   padding: 8px;
 }
 
+/* Modal Styling */
+#infoModal .modal-header {
+  background-color: #ddd;
+  color: #ff6347;
+  border-bottom: none;
+}
+
+#infoModal .modal-title {
+  font-family: "pacifico", cursive;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#infoModal .close {
+  color: #000;
+  opacity: 1;
+}
+
+#infoModal .close:hover {
+  color: #49492b;
+}
+
+#infoModal .modal-body {
+  font-family: "Arial", sans-serif;
+  background-color: #ddd;
+  color: #ff6347;
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
 /* Footer Styling */
 .my-footer {
   font-family: "Pacifico", cursive;
