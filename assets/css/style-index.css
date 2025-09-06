@@ -11,31 +11,29 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/background.jpg") center/cover no-repeat;
 }
 
 /* Push footer to bottom */
 .content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .image-set {
   display: none;
 }
 
+
 .image-set.active {
   display: flex;
 }
 
-/* Background Image Styling 
+/* Background image styling */
 body {
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}*/
+}
 
 /* NavBar Styling */
 .my-navbar {
@@ -225,7 +223,6 @@ h2 {
 
 /* Footer Styling */
 .my-footer {
-  margin-top: auto;
   font-family: "Lobster", cursive;
   background-color: #49492b;
   color: #ff6347;
