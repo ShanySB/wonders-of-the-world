@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap");
 
 /* Make the page a flex column */
 html, body {
@@ -41,7 +41,7 @@ html, body {
 
 .my-navbar .nav-link,
 .my-navbar .navbar-brand {
-  font-family: "Lobster", cursive;
+  font-family: "Pacifico", cursive;
   color: #ff6347 !important;
 }
 
@@ -60,7 +60,7 @@ h2 {
 
 /* Into Screen Styling */
 #intro-screen {
-  font-family: "Lobster", cursive;
+  font-family: "Pacifico", cursive;
   color: #ff6347;
   text-align: center;
   padding: 50px 20px;
@@ -68,7 +68,7 @@ h2 {
 
 /* Skip Button Styling */
 #skip-btn {
-  font-family: "Lobster", cursive;
+  font-family: "Pacifico", cursive;
   background-color: #ddd;
   color: #ff6347;
   border: none;
@@ -85,7 +85,7 @@ h2 {
 
 /* Question Styling*/
 .question {
-  font-family: "Lobster", cursive;
+  font-family: "Epunda-Slab", sans-serif;
   text-align: center;
   color: #ff6347;
   font-size: 1.5rem;
@@ -122,7 +122,7 @@ h2 {
 
 /* Default Overlay For Large Square Cards */
 .overlay {
-  font-family: "Lobster", cursive;
+  font-family: "Epunda-Slab", sans-serif;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -159,7 +159,7 @@ h2 {
 
 /* Smaller Overlay For Final Chosen Cards */
 #chosen-cards .overlay {
-  font-family: "Lobster", cursive;
+  font-family: "Epunda-Slab", sans-serif;
   color: #ff6347;
   font-size: 12px;
   padding: 4px;
@@ -171,7 +171,7 @@ h2 {
 
 /* Chosen Trip Styling */
 #breakdown-list {
-  font-family: "Pacifico", cursive;
+  font-family: "Epunda-Slab", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
@@ -189,7 +189,7 @@ h2 {
 
 /* Confirm Button Styling */
 #confirm-btn {
-  font-family: "Lobster", cursive;
+  font-family: "Pacifico", cursive;
   background-color: #ddd;
   color: #ff6347;
   border: none;
@@ -205,7 +205,7 @@ h2 {
 }
 
 #reset-btn {
-  font-family: "Lobster", cursive;
+  font-family: "Pacifico", cursive;
   background-color: #ddd;
   color: #ff6347;
   border: none;
@@ -223,7 +223,7 @@ h2 {
 /* Footer Styling */
 .my-footer {
   margin-top: auto;
-  font-family: "Lobster", cursive;
+  font-family: "Pacifico", cursive;
   background-color: #49492b;
   color: #ff6347;
   padding: 20px;
