@@ -11,12 +11,19 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background: url("../images/background.jpg") center/cover no-repeat;
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Push footer to bottom */
 .content {
   flex: 1;
-}
+} 
 
 .image-set {
   display: none;
@@ -25,14 +32,6 @@ html, body {
 
 .image-set.active {
   display: flex;
-}
-
-/* Background image styling */
-body {
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* NavBar Styling */
@@ -223,6 +222,7 @@ h2 {
 
 /* Footer Styling */
 .my-footer {
+  margin-top: auto;
   font-family: "Lobster", cursive;
   background-color: #49492b;
   color: #ff6347;
