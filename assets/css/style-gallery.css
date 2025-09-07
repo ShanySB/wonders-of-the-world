@@ -50,7 +50,8 @@ html, body {
 }
 
 /* Styling heading */
-h1 {
+h1,
+h2 {
   font-family: "Pacifico", cursive;
   text-align: center;
   color: #ff6347;
