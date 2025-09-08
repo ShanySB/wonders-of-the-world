@@ -1,11 +1,17 @@
 $(document).ready(function () {
     /**
-     * Action method to enable shown choices in a breakdown list
+     * Action method to enable shown choices & travel dates in a breakdown list
      */
     // Get saved choices from localStorage
     let savedChoices = JSON.parse(localStorage.getItem("userChoices") || "[]");
+    let travelDates = JSON.parse(localStorage.getItem("travelDates") || "{}");
 
-    console.log("Saved choices:", savedChoices);
+    // Show travel dates if available
+    if (travelDates.startDate && travelDates.endDate) {
+        $("#travel-dates-summary").text(
+            `Travel Dates: ${travelDates.startDate} → ${travelDates.endDate}`
+        );
+    }
 
     if (savedChoices.length > 0) {
         savedChoices.forEach(choice => {
