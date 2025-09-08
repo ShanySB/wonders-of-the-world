@@ -83,6 +83,23 @@ h2 {
   background-color: aqua;
 }
 
+/* Date Button Styling */
+#datebtn {
+  font-family: "Pacifico", cursive;
+  background-color: #ddd;
+  color: #ff6347;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#datebtn:hover {
+  background-color: aqua;
+}
+
 /* Question Styling*/
 .question {
   font-family: "Epunda-Slab", sans-serif;
