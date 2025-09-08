@@ -51,7 +51,8 @@ html, body {
 
 /* Heading Styling */
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Pacifico", cursive;
   text-align: center;
   color: #ff6347;
@@ -83,7 +84,17 @@ h2 {
   background-color: aqua;
 }
 
-/* Date Button Styling */
+/* Date Picker Styling */
+#travel-form {
+    font-family: "Epunda-Slab", sans-serif;
+  text-align: center;
+  color: #ff6347;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
 #datebtn {
   font-family: "Pacifico", cursive;
   background-color: #ddd;
