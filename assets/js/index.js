@@ -85,18 +85,23 @@ $(document).ready(function () {
         window.location.href = "form.html";
     });
 
-    // Reset
-    function reset() {
-        choices = [];
-        $('#chosen-cards').empty();
-        $('#breakdown-list').empty();
-        $('#results').hide();
-        $('.image-set').hide().removeClass('active');
-    }
+    // Reset button
+function reset() {
+  // Clear stored choices and dates
+  localStorage.removeItem("userChoices");
+  localStorage.removeItem("travelDates");
 
-    $('.clickable-card').click(action);
-    $('#reset-btn').click(reset);
+  choices = [];
+  $('#chosen-cards').empty();
+  $('#breakdown-list').empty();
 
-    // Run reset at start
-    reset();
+  // Hide results and image sets
+  $('#results').fadeOut(500, function () {
+    $('.image-set').hide().removeClass('active');
+    
+    // Show travel dates section again
+    $('#intro-screen').hide();
+    $('#travel-dates').fadeIn(500);
+  });
+}
 });
