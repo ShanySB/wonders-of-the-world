@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    /**
-     * Action method to enable shown choices & travel dates in a breakdown list
-     */
+     // Action method to enable shown choices & travel dates in a breakdown list
     // Get saved choices from localStorage
     let savedChoices = JSON.parse(localStorage.getItem("userChoices") || "[]");
     let travelDates = JSON.parse(localStorage.getItem("travelDates") || "{}");

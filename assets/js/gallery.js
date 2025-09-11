@@ -1,6 +1,6 @@
 /**
-     * Popup modal functionality
-     */
+ * Popup modal functionality
+ */
 $(document).ready(function () {
     // When any image with data-country is clicked
     $(".place-img").click(function () {

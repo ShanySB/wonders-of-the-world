@@ -17,9 +17,7 @@ $(document).ready(function () {
         showTravelDates();
     });
 
-    /**
-     * Travel date form handling
-     */
+    //Travel date form handling
     $("#travel-form").on("submit", function (e) {
         e.preventDefault();
 
@@ -98,5 +96,5 @@ $('.clickable-card').click(action);
 $('#reset-btn').click(reset);
 
 // Run reset at start
-reset();
+reset()
 });
