@@ -25,6 +25,11 @@ html, body {
   flex: 1;
 } 
 
+
+.expand {
+  flex: 1;
+}
+
 .image-set {
   display: none;
 }
@@ -67,6 +72,10 @@ h3 {
   padding: 50px 20px;
 }
 
+.lead {
+  background-color: #ddd;
+}
+
 /* Skip Button Styling */
 #skip-btn {
   font-family: "Pacifico", cursive;
@@ -81,7 +90,7 @@ h3 {
 }
 
 #skip-btn:hover {
-  background-color: aqua;
+  background-color: #49492b;
 }
 
 /* Date Picker Styling */
@@ -108,7 +117,7 @@ h3 {
 }
 
 #datebtn:hover {
-  background-color: aqua;
+  background-color: #49492b;
 }
 
 /* Question Styling*/
@@ -229,7 +238,7 @@ h3 {
 }
 
 #confirm-btn:hover {
-  background-color: aqua;
+  background-color: #49492b;
 }
 
 #reset-btn {
@@ -245,7 +254,7 @@ h3 {
 }
 
 #reset-btn:hover {
-  background-color: aqua;
+  background-color: #49492b;
 }
 
 /* Footer Styling */
