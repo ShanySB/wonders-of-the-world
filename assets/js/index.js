@@ -87,21 +87,16 @@ $(document).ready(function () {
 
     // Reset button
 function reset() {
-  // Clear stored choices and dates
-  localStorage.removeItem("userChoices");
-  localStorage.removeItem("travelDates");
-
   choices = [];
   $('#chosen-cards').empty();
   $('#breakdown-list').empty();
-
-  // Hide results and image sets
-  $('#results').fadeOut(500, function () {
-    $('.image-set').hide().removeClass('active');
-    
-    // Show travel dates section again
-    $('#intro-screen').hide();
-    $('#travel-dates').fadeIn(500);
-  });
+  $('#results').hide();
+  $('.image-set').hide().removeClass('active');
 }
+
+$('.clickable-card').click(action);
+$('#reset-btn').click(reset);
+
+// Run reset at start
+reset();
 });
