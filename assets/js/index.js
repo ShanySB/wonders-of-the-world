@@ -82,4 +82,19 @@ $(document).ready(function () {
         localStorage.setItem("userChoices", JSON.stringify(choices));
         window.location.href = "form.html";
     });
+
+        // Reset button
+    function reset() {
+      choices = [];
+      $('#chosen-cards').empty();
+      $('#breakdown-list').empty();
+      $('#results').hide();
+      $('.image-set').hide().removeClass('active');
+    }
+
+    $('.clickable-card').click(action);
+    $('#reset-btn').click(reset);
+
+    // Run reset at start
+    reset()
 });
