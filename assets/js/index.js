@@ -96,5 +96,5 @@ $(document).ready(function () {
     $('#reset-btn').click(reset);
 
     // Run reset at start
-    reset()
+    reset();
 });
