@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     /**
      * Show travel dates after intro
      */
@@ -17,40 +18,92 @@ $(document).ready(function () {
         showTravelDates();
     });
 
-    //Travel date form handling
+    /* =====================
+       DATE LIMIT HANDLING
+    ====================== */
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const maxDate = new Date(today);
+    maxDate.setFullYear(today.getFullYear() + 1);
+
+    function formatDate(d) {
+        const month = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return `${d.getFullYear()}-${month}-${day}`;
+    }
+
+    const minDateStr = formatDate(today);
+    const maxDateStr = formatDate(maxDate);
+
+    $("#start-date, #end-date")
+        .attr("min", minDateStr)
+        .attr("max", maxDateStr);
+
+    $("#start-date").on("change", function () {
+        $("#end-date").attr("min", $(this).val());
+    });
+
     $("#travel-form").on("submit", function (e) {
         e.preventDefault();
 
-        let startDate = $("#start-date").val();
-        let endDate = $("#end-date").val();
+        const startVal = $("#start-date").val();
+        const endVal = $("#end-date").val();
 
-        if (!startDate || !endDate) {
-            alert("Please select both dates before continuing.");
+        if (!startVal || !endVal) {
+            alert("Please select both dates.");
             return;
         }
 
-        // Save travel dates
-        localStorage.setItem("travelDates", JSON.stringify({ startDate, endDate }));
+        if (startVal < minDateStr) {
+            alert("Travel dates cannot be in the past.");
+            return;
+        }
 
-        // Hide dates & show first image set
+        if (endVal > maxDateStr) {
+            alert("Travel dates cannot be more than one year in the future.");
+            return;
+        }
+
+        if (endVal < startVal) {
+            alert("End date cannot be before start date.");
+            return;
+        }
+
+        localStorage.setItem(
+            "travelDates",
+            JSON.stringify({ startDate: startVal, endDate: endVal })
+        );
+
+        // ONLY move forward if valid
         $("#travel-dates").fadeOut(500, function () {
             $("#image-sets").fadeIn(500);
             $(".image-set").first().fadeIn(500).addClass("active");
         });
     });
 
-    /**
-     * Card selection functionality
-     */
+    /* =====================
+       CARD SELECTION
+    ====================== */
+
     let choices = [];
 
     function action() {
+
+        //Prevent double clicks
+        if ($(this).hasClass("disabled")) return;
+
+        //disable all cards in this set
+        $(this).closest(".image-set")
+            .find(".clickable-card")
+            .addClass("disabled");
+
         let currentSet = $(this).closest('.image-set');
         let nextSet = currentSet.next('.image-set');
         let chosenImg = $(this).find('img').attr('src');
         let chosenText = $(this).find('.card-text').text();
 
-        // Save choice
         choices.push({ img: chosenImg, text: chosenText });
 
         if (nextSet.length) {
@@ -59,7 +112,6 @@ $(document).ready(function () {
                 nextSet.fadeIn(500).addClass('active');
             });
         } else {
-            // Show results if no more sets
             currentSet.fadeOut(500, function () {
                 choices.forEach(choice => {
                     $('#chosen-cards').append(`
@@ -77,24 +129,24 @@ $(document).ready(function () {
         }
     }
 
-    // Confirm button
+    $('.clickable-card').click(action);
+
     $('#confirm-btn').click(function () {
         localStorage.setItem("userChoices", JSON.stringify(choices));
         window.location.href = "form.html";
     });
 
-        // Reset button
     function reset() {
-      choices = [];
-      $('#chosen-cards').empty();
-      $('#breakdown-list').empty();
-      $('#results').hide();
-      $('.image-set').hide().removeClass('active');
+        choices = [];
+        $('#chosen-cards').empty();
+        $('#breakdown-list').empty();
+        $('#results').hide();
+        $('.image-set').hide().removeClass('active');
     }
 
-    $('.clickable-card').click(action);
     $('#reset-btn').click(reset);
 
-    // Run reset at start
+    // Initial state
     reset();
+
 });
