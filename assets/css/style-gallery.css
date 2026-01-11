@@ -42,11 +42,11 @@ html, body {
 .my-navbar .nav-link,
 .my-navbar .navbar-brand {
   font-family: "Pacifico", cursive;
-  color: #ff6347 !important;
+  color: #ffffff!important;
 }
 
 .my-navbar .nav-link:hover {
-  color: white !important;
+  color: #ff6347 !important;
 }
 
 /* Styling heading */
@@ -54,8 +54,8 @@ h1,
 h2 {
   font-family: "Pacifico", cursive;
   text-align: center;
-  color: #ff6347;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.65);
 }
 
 /* Gallery card styling */
@@ -91,7 +91,7 @@ h2 {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
-  color: #ff6347;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
@@ -100,8 +100,8 @@ h2 {
 
 /* Modal Styling */
 #infoModal .modal-header {
-  background-color: #ddd;
-  color: #ff6347;
+  background-color: #49492b;
+  color: #ffffff;
   border-bottom: none;
 }
 
@@ -117,13 +117,13 @@ h2 {
 }
 
 #infoModal .close:hover {
-  color: #49492b;
+  color: #ff6347;
 }
 
 #infoModal .modal-body {
   font-family: "Epunda-Slab", sans-serif;
-  background-color: #ddd;
-  color: #ff6347;
+  background-color: #49492b;
+  color: #ffffff;
   font-size: 1rem;
   padding: 20px;
   border-radius: 0 0 10px 10px;
@@ -134,13 +134,13 @@ h2 {
   margin-top: auto;
   font-family: "Pacifico", cursive;
   background-color: #49492b;
-  color: #ff6347;
+  color: #ffffff;
   padding: 20px;
   width: 100%;
 }
 /*Social media links styling */
 .social-links a {
-  color: #ff6347;
+  color: #ffffff;
   font-size: 1.2rem;
   margin: 0 10px;
   text-decoration: none;
@@ -149,5 +149,5 @@ h2 {
 
 /* Hover effect */
 .social-links a:hover {
-  color: white;
+  color: #ff6347;
 }
