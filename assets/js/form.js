@@ -32,4 +32,33 @@ $(document).ready(function () {
         // Fallback if nothing was chosen
         $('#chosen-cards').append("<p>No choices saved.</p>");
     }
+
+    // -------------------------
+    // Phone input: digits only
+    // -------------------------
+    $("#phone").on("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+    });
+
+    // -----------------------
+    // Form submit validation
+    // -----------------------
+    $("signup form").on("submit", function (e) {
+        e.preventDefault();
+
+        const phone = $("#phone").val();
+        const ukMobileRegex = /^07\d{9}$/;
+
+        if (!ukMobileRegex.test(phone)) {
+           alert("Please enter a valid UK mobile number (07XXXXXXXXX).");
+           return;
+        }
+        
+        // ✅ If phone is valid, continue submission
+        // (EmailJS send, success message, reset form, etc.)
+        
+        alert("Form submitted successfully!");
+        this.reset();
+    });
+
 });

@@ -83,15 +83,32 @@
          <form class="w-75 mx-auto" id="signup-form">
            <div class="form-group">
              <label for="Name">Full Name</label>
-             <input type="text" class="form-control" id="name" name="user_name" placeholder="Enter your name" required>
+             <input type="text" 
+             class="form-control" 
+             id="name" name="user_name" 
+             placeholder="Enter your name" 
+             required>
            </div>
            <div class="form-group">
              <label for="Email">Email Address</label>
-             <input type="email" class="form-control" id="email" name="user_email" placeholder="Enter your email" required>
+             <input type="email" 
+             class="form-control" 
+             id="email" 
+             name="user_email" 
+             placeholder="Enter your email" 
+             required>
            </div>
            <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" name="user_phone" placeholder="Enter your phone number" required>
+            <input type="tel" 
+            class="form-control" 
+            id="phone" 
+            name="user_phone" 
+            placeholder="Enter your phone number" 
+            inputmode=""numeric
+            pattern="07[0-9]{9}$"
+            maxlength="11" 
+            required>
            </div>
 
            <!-- Hidden Inputs For Choices & Dates -->
